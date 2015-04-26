@@ -1,11 +1,13 @@
 class MediaContentsController < ApplicationController
- 
+
   def index
-    @media_contents = Media.all
+    @newsletter = Newsletter.find(params[:newsletter_id])
+    @media_contents = @newsletter.medias.all
   end
 
  def create
-    @media = Media.new(file_name: params[:file])
+    @newsletter = Newsletter.find(params[:newsletter_id])
+    @media = @newsletter.medias.new(file_name: params[:file])
     if @media.save!
       respond_to do |format|
         format.json{ render :json => @media }
@@ -14,7 +16,8 @@ class MediaContentsController < ApplicationController
   end
 
 def delete_media
-  Media.where(id: params[:media_contents]).destroy_all
+  @newsletter = Newsletter.find(params[:newsletter_id])
+  @newsletter.medias.where(id: params[:media_contents]).destroy_all
   redirect_to root_url
 end
 

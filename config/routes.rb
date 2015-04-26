@@ -1,13 +1,15 @@
 Rails.application.routes.draw do
+  resources :newsletters do
+    resources :media_contents, only: [:create]
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
-  root 'media_contents#index'
+  root 'newsletters#index'
 
-  resources :media_contents, only: [:create]
 
   delete 'delete_media', to: "media_contents#delete_media"
 

@@ -41,6 +41,29 @@ group :production do
   gem 'pg'
 end
 
+
+group :development do
+  gem 'pry-rails'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'quiet_assets'
+  gem 'rails_layout'
+  gem 'spring-commands-rspec'
+end
+
+
+group :development, :test do
+  gem 'dotenv-rails'
+  gem 'faker'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'childprocess'
+  gem 'byebug'
+  gem 'web-console', '~> 2.0'
+  gem 'spring'
+end
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
