@@ -10,5 +10,10 @@
   <%= @newsletter.description %>
 </p>
 
+<% @media_contents.each do |media| %>
+<%= media.file_name %>
+
+<% end %>
+
 <%= link_to 'Edit', edit_newsletter_path(@newsletter) %> |
 <%= link_to 'Back', newsletters_path %>

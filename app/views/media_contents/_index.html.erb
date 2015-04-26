@@ -44,7 +44,7 @@
         <% end %>
       </div>
     </div>
-  </div>  
+  </div>
 </div>
 
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -55,7 +55,7 @@
         <h4 class="modal-title" id="myModalLabel">Upload New</h4>
       </div>
       <div class="modal-body">
-        <%= form_tag '/media_contents', method: :post, class: "dropzone form", id: "media-dropzone" do %>
+        <%= form_tag newsletter_path + '/media_contents', method: :post, class: "dropzone form", id: "media-dropzone" do %>
           <div class="fallback">
             <%= file_field_tag "media", multiple: true%>
           </div>

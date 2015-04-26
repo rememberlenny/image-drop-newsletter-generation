@@ -10,12 +10,14 @@ class NewslettersController < ApplicationController
   # GET /newsletters/1
   # GET /newsletters/1.json
   def show
+    @newsletter = Newsletter.find(params[:id])
+    @media_contents = @newsletter.medias.all
   end
 
   # GET /newsletters/new
   def new
     @newsletter = Newsletter.new
-    @media_contents = @newsletter.media.all
+    @media_contents = @newsletter.medias.all
   end
 
   # GET /newsletters/1/edit
