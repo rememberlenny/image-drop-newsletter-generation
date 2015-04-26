@@ -20,7 +20,7 @@ width="100%">
         "border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
         width="282">
           <tbody>
-
+            <%= render :partial => 'table_box', :object => { :media => local_assigns[:table_row][:media] } %>
           </tbody>
         </table>
       </td>
