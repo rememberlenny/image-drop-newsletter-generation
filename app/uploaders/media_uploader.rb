@@ -6,19 +6,18 @@ class MediaUploader < CarrierWave::Uploader::Base
   # include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
 
+  version :thumb    do
+    process :resize_to_fit => [32, 32]
+  end
+  version :preview  do
+    process :resize_to_fit => [400, 400]
+  end
+  version :full     do
+    process :resize_to_fit => [1024, 768]
+  end
+
   if Rails.env.production?
     include Cloudinary::CarrierWave
-
-      version :thumb    do
-        process :resize_to_fit => [32, 32]
-      end
-      version :preview  do
-        process :resize_to_fit => [128, 128]
-      end
-      version :full     do
-        process :resize_to_fit => [1024, 768]
-      end
-
   end
 
   # Choose what kind of storage to use for this uploader:

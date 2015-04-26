@@ -1,0 +1,29 @@
+<table>
+  <tr>
+    <td align="center" style=
+    "mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
+    valign="top">
+      <!-- BEGIN FOOTER // -->
+
+
+      <table border="0" cellpadding="0" cellspacing="0" id="templateFooter"
+      style=
+      "border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #FFFFFF;border-top: 0;border-bottom: 0;"
+      width="600">
+        <tbody>
+          <tr>
+            <td class="footerContainer" style=
+            "padding-bottom: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
+            valign="top">
+              <% @media_contents.each do |media| %>
+                <%= render  :partial => 'table_row', :object => media %>
+              <% end %>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+    </td>
+  </tr>
+</table>
