@@ -8,17 +8,17 @@ class MediaUploader < CarrierWave::Uploader::Base
 
   if Rails.env.production?
     include Cloudinary::CarrierWave
-    version :print do
-      version :thumb    { process :resize_to_fit => [32, 32] }
-      version :preview  { process :resize_to_fit => [256, 256] }
-      version :full     { process :resize_to_fit => [2048, 2048] }
-    end
 
-    version :web do
-      version :thumb    { process :resize_to_fit => [32, 32] }
-      version :preview  { process :resize_to_fit => [128, 128] }
-      version :full     { process :resize_to_fit => [1024, 768] }
-    end
+      version :thumb    do
+        process :resize_to_fit => [32, 32]
+      end
+      version :preview  do
+        process :resize_to_fit => [128, 128]
+      end
+      version :full     do
+        process :resize_to_fit => [1024, 768]
+      end
+
   end
 
   # Choose what kind of storage to use for this uploader:
@@ -65,5 +65,4 @@ class MediaUploader < CarrierWave::Uploader::Base
   # def filename
   #   "something.jpg" if original_filename
   # end
-
 end
