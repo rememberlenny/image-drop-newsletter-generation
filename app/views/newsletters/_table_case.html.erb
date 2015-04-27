@@ -15,9 +15,10 @@
             <td class="footerContainer" style=
             "padding-bottom: 9px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"
             valign="top">
-              <% i = 0 %>
+              <% int = 0 %>
               <% @media_contents.each do |media| %>
-                <%= render  :partial => 'table_row', :object => { :media => media, :i => i } %>
+                <%= render  :partial => 'table_row', :object => { :media => media, :int => int } %>
+                <% int = int + 1 %>
               <% end %>
             </td>
           </tr>
