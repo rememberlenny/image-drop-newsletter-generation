@@ -1,16 +1,19 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @newsletter.title %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @newsletter.description %>
-</p>
-
-<%= render :partial => 'table_case', :object => @media_contents %>
-
-<%= link_to 'Edit', edit_newsletter_path(@newsletter) %> |
-<%= link_to 'Back', newsletters_path %>
+<table>
+  <tr>
+    <td>
+      <table style="text-align:center; WIDTH: 600PX;">
+        <tr>
+          <td>
+            <div style="width: 600px; text-align: left; font-size: 14px; line-height: 16px; padding: 0 20px;">
+              <h1>
+                <%= @newsletter.title %>
+              </h1>
+              <%= @newsletter.description %>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <%= render :partial => 'table_case', :object => @media_contents %>
+    </td>
+  </tr>
+</table>
