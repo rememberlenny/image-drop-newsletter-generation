@@ -16,8 +16,7 @@ class MediaContentsController < ApplicationController
   end
 
 def delete_media
-  @newsletter = Newsletter.find(params[:newsletter_id])
-  @newsletter.medias.where(id: params[:media_contents]).destroy_all
+  Media.where(id: params[:media_contents]).destroy_all
   redirect_to root_url
 end
 
