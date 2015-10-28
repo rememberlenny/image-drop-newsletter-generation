@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :introexams
+
   resources :newsletters do
     resources :media_contents, only: [:create]
   end

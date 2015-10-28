@@ -1,0 +1,49 @@
+<%= form_for(@introexam) do |f| %>
+  <% if @introexam.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@introexam.errors.count, "error") %> prohibited this introexam from being saved:</h2>
+
+      <ul>
+      <% @introexam.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :message %><br>
+    <%= f.text_field :message %>
+  </div>
+  <div class="field">
+    <%= f.label :picture1 %><br>
+    <%= f.text_field :picture1 %>
+  </div>
+  <div class="field">
+    <%= f.label :testimonial1 %><br>
+    <%= f.text_field :testimonial1 %>
+  </div>
+  <div class="field">
+    <%= f.label :picture2 %><br>
+    <%= f.text_field :picture2 %>
+  </div>
+  <div class="field">
+    <%= f.label :testimonial2 %><br>
+    <%= f.text_field :testimonial2 %>
+  </div>
+  <div class="field">
+    <%= f.label :picture3 %><br>
+    <%= f.text_field :picture3 %>
+  </div>
+  <div class="field">
+    <%= f.label :testimonial3 %><br>
+    <%= f.text_field :testimonial3 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.5'
 
@@ -54,14 +53,14 @@ end
 
 
 group :development, :test do
-  gem 'dotenv-rails'
-  gem 'faker'
-  gem 'rspec-rails'
-  gem 'factory_girl_rails'
-  gem 'childprocess'
-  gem 'byebug'
-  gem 'web-console', '~> 2.0'
-  gem 'spring'
+  # gem 'dotenv-rails'
+  # gem 'faker'
+  # gem 'rspec-rails'
+  # gem 'factory_girl_rails'
+  # gem 'childprocess'
+  # gem 'byebug'
+  # gem 'web-console', '~> 2.0'
+  # gem 'spring'
 end
 
 
